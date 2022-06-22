@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 			if(matches) {
 				matches.forEach(match => {
-					let className = match.replace(/\s+/g, ' ').trim();
+					let className = match.replace(/\s+/g, ' ').replace('" ', '"').trim();
 					code = code?.replace(match, className);
 				}
 				);

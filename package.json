@@ -1,6 +1,6 @@
 {
-  "name": "prettyclasses",
-	"displayName": "pretty-classes",
+  "name": "classprettier",
+	"displayName": "class-prettier",
 	"description": "Prettify classes",
 	"author": {
 		"name": "Fersat",
@@ -20,7 +20,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.prettyclasses",
+				"command": "extension.classprettier",
 				"title": "Prettify class names"
 			}
 		]
