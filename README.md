@@ -3,9 +3,7 @@
 
 You can prettify your classnames with this extension. Just save the file.
 
-https://user-images.githubusercontent.com/58539842/175269525-6fd854bd-5254-4629-87ff-96cac46112c9.mov
-
-
+![in](https://user-images.githubusercontent.com/58539842/175272343-7086f618-e12b-4f7d-91b7-0f1a02969b01.gif)
 
 ## Features
 
