@@ -13,4 +13,7 @@ https://user-images.githubusercontent.com/58539842/175269525-6fd854bd-5254-4629-
 
 ## Roadmap
 [ ] Sort class names by setting
+
 [ ] Enable/disable extension setting
+
+[ ] Filetype filter setting
