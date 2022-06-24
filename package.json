@@ -1,49 +1,88 @@
 {
   "name": "classprettier",
-	"displayName": "class-prettier",
-	"description": "Prettify classes",
-	"author": {
-		"name": "Fersat",
-		"email": "fertagram@gmail.com"
-	},
-	"version": "0.0.2",
-	"engines": {
-		"vscode": "^1.68.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-        "onStartupFinished"
+  "displayName": "Prettify Classes",
+  "description": "Organize your classes in a readable way",
+  "publisher": "fers4t",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fers4t/vscode-class-prettier"
+  },
+  "author": {
+    "name": "Fersat",
+    "email": "fertagram@gmail.com"
+  },
+  "version": "0.0.5",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "classprettier.sortClasses",
+        "title": "Sort Class Names"
+      },
+      {
+        "command": "deleteEmptyClasses",
+        "title": "Delete Empty Classes"
+      }
     ],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.classprettier",
-				"title": "Prettify class names"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.68.0",
-		"@types/glob": "^7.2.0",
-		"@types/mocha": "^9.1.1",
-		"@types/node": "16.x",
-		"@typescript-eslint/eslint-plugin": "^5.27.0",
-		"@typescript-eslint/parser": "^5.27.0",
-		"eslint": "^8.16.0",
-		"glob": "^8.0.3",
-		"mocha": "^10.0.0",
-		"typescript": "^4.7.2",
-		"@vscode/test-electron": "^2.1.3"
-	}
+    "configuration": {
+      "title": "Prettify Classes",
+      "properties": {
+        "classprettier.sortBy": {
+          "type": "string",
+          "default": "ASC",
+          "description": "I can sort your class names alphabetically. Please type ASC or DESC."
+        },
+        "classprettier.sortingEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable sorting."
+        },
+        "classprettier.deleteEmptyClasses": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable delete empty class names. Eg; class=''."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.68.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "@vscode/test-electron": "^2.1.3",
+    "eslint": "^8.16.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.2"
+  },
+  "__metadata": {
+    "id": "14071be4-a6dd-4138-a14e-97d24c33ddec",
+    "publisherDisplayName": "Fersat",
+    "publisherId": "e3986b12-0172-451e-84b7-9d24a2f17ce8",
+    "isPreReleaseVersion": false
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
 }
