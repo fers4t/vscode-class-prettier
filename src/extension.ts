@@ -4,7 +4,7 @@ import * as vscode from 'vscode'
 import {
   deleteEmptyClasses,
   runFunctionsInOrder,
-  sortClasses,
+  cleanAndSortClasses,
 } from './utils/functions'
 
 // this method is called when your extension is activated
@@ -12,7 +12,7 @@ import {
 export function activate(context: vscode.ExtensionContext) {
   const sortClassesCommand = vscode.commands.registerCommand(
     'classprettier.sortClasses',
-    () => sortClasses(),
+    () => cleanAndSortClasses(),
   )
 
   const deleteEmptyClassesCommand = vscode.commands.registerCommand(

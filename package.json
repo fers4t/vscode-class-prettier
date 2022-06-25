@@ -39,6 +39,10 @@
       "properties": {
         "classprettier.sortBy": {
           "type": "string",
+          "enum": [
+            "ASC",
+            "DESC"
+          ],
           "default": "ASC",
           "description": "I can sort your class names alphabetically. Please type ASC or DESC."
         },

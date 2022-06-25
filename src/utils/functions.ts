@@ -1,7 +1,7 @@
 import { nextTick } from 'process'
 import * as vscode from 'vscode'
 
-export function sortClasses() {
+export function cleanAndSortClasses() {
   const window = vscode?.window
   const editor = window?.activeTextEditor
   const document = editor?.document
